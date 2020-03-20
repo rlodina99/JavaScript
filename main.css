@@ -1,0 +1,126 @@
+
+input.dreaptaButton:active { background:white; } 
+
+h2 {
+  color: darkblue;
+}
+
+.titlu {
+  font-size: 2em;
+  color: brown;
+  text-align: left
+
+}
+
+.susButton{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: rgb(211, 211, 211);
+  text-align: center;
+  font-size: 2em;
+  font-family: sans-serif;
+  
+
+  padding: 21px;
+  margin: 10px;
+  
+  cursor: pointer;
+  transition: 0.3s;
+  /* vertical-align: middle; */
+}
+
+.susButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.dreaptaButton{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #ff9500;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-family: sans-serif;
+
+  padding: 21px;
+  margin: 10px;
+  
+  cursor: pointer;
+  transition: 0.3s;
+  /* vertical-align: middle; */
+}
+
+.dreaptaButton:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.nrButton{
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background-color:#505050;
+  text-align: center;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+
+  padding: 21px;
+  margin: 5px;
+  
+  cursor: pointer;
+
+  transition: 0.3s;
+  /* vertical-align: middle; */
+}
+
+.nrButton:hover {
+  
+  background-color: #d4d4d2;
+  color: white;
+  
+}
+
+
+.zeroButton{
+  width: 145px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #505050;
+  color: white;
+  text-align: start;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 100;
+
+  padding: 21px;
+  margin: 10px;
+  
+  cursor: pointer;
+  transition: 0.3s;
+  /* vertical-align: middle; */
+}
+
+.zeroButton:hover {
+  
+  background-color: #d4d4d2;
+  color: white;
+  
+}
+
+
+.display {
+  /* align-content: center; */
+  margin-right: 20px;
+  font-size: 70px;
+  text-align: end;
+  font-weight: 100;
+  color: white;
+  font-family: sans-serif;
+}
