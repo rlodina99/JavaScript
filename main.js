@@ -1,8 +1,26 @@
 
+
+var nod = document.getElementsByClassName('display');
+
+let semn;
+let nr1;
+
+const resetOperatii = (semnTrimis) => {
+
+  Array.from(document.getElementsByClassName('dreaptaButton'))
+    .forEach(e => e.classList.remove('dreaptaButtonSelectat'));
+
+  nr1 = nod[0].innerHTML;
+
+  nod[0].innerHTML = 0;
+
+  semn = semnTrimis;
+
+}
+
+
 var onNrClick = (nr) => {
 
-
-  var nod = document.getElementsByClassName('display');
 
   if (!isNaN(nr)) {
 
@@ -12,44 +30,79 @@ var onNrClick = (nr) => {
   else {
 
     if (nr == 'ac') {
+      resetOperatii();
       nod[0].innerHTML = 0;
+    }
+    else if (nr == 'opus') {
+      nod[0].innerHTML = -nod[0].innerHTML;
     }
     else if (nr == 'virgula') {
       nod[0].innerHTML = nod[0].innerHTML + ',';
     }
     else if (nr == 'plus') {
 
+      resetOperatii('+');
 
-      document.getElementsByClassName('dreaptaButton').style.backgroundColor = "red";
+      var v = document.getElementById("plus");
+      v.classList.add("dreaptaButtonSelectat");
 
-
-
-      document.getElementById('plus').style.backgroundColor = "white";
-      document.getElementById('plus').style.color = "orange";
 
     }
     else if (nr == 'minus') {
 
-      document.getElementById('minus').style.backgroundColor = "white";
-      document.getElementById('minus').style.color = "orange";
+      resetOperatii('-');
+
+      var v = document.getElementById("minus");
+      v.classList.add("dreaptaButtonSelectat");
+
 
     }
     else if (nr == 'inmultire') {
 
-      document.getElementById('inmultire').style.backgroundColor = "white";
-      document.getElementById('inmultire').style.color = "orange";
+      resetOperatii('*');
+
+      var v = document.getElementById("inmultire");
+      v.classList.add("dreaptaButtonSelectat");
 
     }
     else if (nr == 'impartire') {
 
-      document.getElementById('impartire').style.backgroundColor = "white";
-      document.getElementById('impartire').style.color = "orange";
+      resetOperatii('/');
+
+      var v = document.getElementById("impartire");
+      v.classList.add("dreaptaButtonSelectat");
+
 
     }
     else if (nr == 'egal') {
 
-      document.getElementById('egal').style.backgroundColor = "white";
-      document.getElementById('egal').style.color = "orange";
+      Array.from(document.getElementsByClassName('dreaptaButton'))
+        .forEach(e => e.classList.remove('dreaptaButtonSelectat'));
+
+      if (semn == '+') {
+
+        var nr2 = nod[0].innerHTML;
+        nod[0].innerHTML = +nr1 + +nr2;
+
+      }
+      else if (semn == '-') {
+
+
+        var nr2 = nod[0].innerHTML;
+        nod[0].innerHTML = -(-nr1 - -nr2);
+      }
+      else if (semn == '*') {
+
+
+        var nr2 = nod[0].innerHTML;
+        nod[0].innerHTML = nr1 * nr2;
+      }
+      else if (semn == '/') {
+
+        var nr2 = nod[0].innerHTML;
+        nod[0].innerHTML = nr1 / nr2;
+      }
+
 
     }
 

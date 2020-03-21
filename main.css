@@ -54,9 +54,28 @@ h2 {
   /* vertical-align: middle; */
 }
 
+.dreaptaButtonSelectat{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: white;
+  color: #ff9500;
+  text-align: center;
+  font-size: 2em;
+  font-family: sans-serif;
+
+  padding: 21px;
+  margin: 10px;
+  
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
 .dreaptaButton:hover {
   background-color: white;
-  color: black;
+  color: #ff9500;
 }
 
 
