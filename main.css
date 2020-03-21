@@ -1,5 +1,4 @@
 
-input.dreaptaButton:active { background:white; } 
 
 h2 {
   color: darkblue;
@@ -136,9 +135,11 @@ h2 {
 
 .display {
   /* align-content: center; */
+  
+  
   margin-right: 20px;
-  font-size: 70px;
-  text-align: end;
+  font-size: 70px;  
+  text-align: end;  
   font-weight: 100;
   color: white;
   font-family: sans-serif;

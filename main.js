@@ -1,9 +1,10 @@
 
-
 var nod = document.getElementsByClassName('display');
 
 let semn;
 let nr1;
+
+
 
 const resetOperatii = (semnTrimis) => {
 
@@ -24,7 +25,18 @@ var onNrClick = (nr) => {
 
   if (!isNaN(nr)) {
 
-    nod[0].innerHTML = nod[0].innerHTML * 10 + nr;
+    if (nod[0].innerHTML == 0) {
+
+      nod[0].innerHTML = nr;
+
+    }
+    else {
+
+      nod[0].innerHTML = nod[0].innerHTML + nr;
+
+    }
+
+    nr2 = nod[0].innerHTML;
 
   }
   else {
@@ -37,7 +49,10 @@ var onNrClick = (nr) => {
       nod[0].innerHTML = -nod[0].innerHTML;
     }
     else if (nr == 'virgula') {
-      nod[0].innerHTML = nod[0].innerHTML + ',';
+
+      nod[0].innerHTML = nod[0].innerHTML + '.';
+
+
     }
     else if (nr == 'plus') {
 
@@ -79,30 +94,37 @@ var onNrClick = (nr) => {
       Array.from(document.getElementsByClassName('dreaptaButton'))
         .forEach(e => e.classList.remove('dreaptaButtonSelectat'));
 
+
+      //nod[0].innerHTML.toFixed(6);
+
       if (semn == '+') {
 
-        var nr2 = nod[0].innerHTML;
+
         nod[0].innerHTML = +nr1 + +nr2;
 
       }
       else if (semn == '-') {
 
 
-        var nr2 = nod[0].innerHTML;
-        nod[0].innerHTML = -(-nr1 - -nr2);
+        nod[0].innerHTML = +nr1 - +nr2;
+
       }
       else if (semn == '*') {
 
 
-        var nr2 = nod[0].innerHTML;
         nod[0].innerHTML = nr1 * nr2;
       }
       else if (semn == '/') {
 
-        var nr2 = nod[0].innerHTML;
         nod[0].innerHTML = nr1 / nr2;
+
       }
 
+      nr1 = nod[0].innerHTML;
+
+      var y = nr1.toFixed(2);
+
+      nr1 = y;
 
     }
 
